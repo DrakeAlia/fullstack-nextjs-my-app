@@ -8,7 +8,7 @@ const GlassPane = ({ children, className }) => {
         className
       )}
     >
-        {children}
+      {children}
     </div>
   );
 };

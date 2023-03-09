@@ -24,8 +24,8 @@
       "@/lib/*": ["./lib/*"],
       "@/components/*": ["./components/*"],
       "@/assets/*": ["./assets/*"],
+      "@/styles/*": ["./styles/*"],
       // "@/hooks/*": ["./hooks/*"],
-      // "@/styles/*": ["./styles/*"],
       // "@/prisma/*": ["./prisma/*"],
     }
   },
