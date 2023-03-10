@@ -1,5 +1,5 @@
-import { db } from "@component/lib/db";
-import { createJWT, hashPassword } from "@component/lib/auth";
+import { createJWT, hashPassword } from "@/lib/auth";
+import { db } from "@/lib/db";
 import { NextApiRequest, NextApiResponse } from "next";
 import { serialize } from "cookie";
 

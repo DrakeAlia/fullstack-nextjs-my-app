@@ -11,7 +11,11 @@ const links = [
     link: "/calendar",
   },
   { label: "Profile", icon: "User", link: "/profile" },
-  { label: "Settings", icon: "Settings", link: "/settings" },
+  {
+    label: "Settings",
+    icon: "Settings",
+    link: "/settings",
+  },
 ];
 
 const Sidebar = () => {

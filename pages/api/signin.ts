@@ -1,7 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { db } from "@component/lib/db";
-import { comparePasswords, createJWT } from "@component/lib/auth";
+import { comparePasswords, createJWT } from "@/lib/auth";
+import { db } from "@/lib/db";
 import { serialize } from "cookie";
+import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function signin(
   req: NextApiRequest,

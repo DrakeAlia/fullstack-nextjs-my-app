@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const icons = { Settings, User, Grid, Calendar };
-
 const SidebarLink = ({ link }) => {
   const pathname = usePathname();
   let isActive = false;
