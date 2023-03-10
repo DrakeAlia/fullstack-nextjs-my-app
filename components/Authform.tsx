@@ -5,7 +5,7 @@ import Card from "./Card";
 import Input from "./Input";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { register, sigin } from "@component/lib/api";
+import { register, signin } from "@component/lib/api";
 import { useCallback, useState } from "react";
 
 const registerContent = {
@@ -37,7 +37,7 @@ export default function Authform({ mode }: { mode: "register" | "signin" }) {
     if (mode === "register") {
       await register(formState);
     } else {
-      await sigin(formState);
+      await signin(formState);
     }
 
     setFormState({ ...initial });

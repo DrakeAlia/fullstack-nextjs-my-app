@@ -1,8 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { db } from "@component/lib/db";
-import { comparePasswords } from "@component/lib/auth";
+import { comparePasswords, createJWT } from "@component/lib/auth";
 import { serialize } from "cookie";
-import { createJWT } from "@component/lib/auth";
 
 export default async function signin(
   req: NextApiRequest,
@@ -14,16 +13,12 @@ export default async function signin(
         email: req.body.email,
       },
     });
-    if (!user) {
-      res.status(401);
-      res.json({ error: "Invalid login" });
-      return;
-    }
 
     const isUser = await comparePasswords(req.body.password, user?.password);
 
     if (isUser) {
       const jwt = await createJWT(user);
+
       res.setHeader(
         "Set-Cookie",
         serialize(process.env.COOKIE_NAME, jwt, {
@@ -33,13 +28,10 @@ export default async function signin(
         })
       );
       res.status(201);
-      res.end();
-    } else {
-      res.status(401);
-      res.json({ error: "Invalid login" });
+      res.json({});
     }
   } else {
     res.status(402);
-    res.end();
+    res.json({});
   }
 }

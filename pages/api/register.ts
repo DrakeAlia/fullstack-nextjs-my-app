@@ -24,13 +24,14 @@ export default async function register(
       serialize(process.env.COOKIE_NAME, jwt, {
         httpOnly: true,
         path: "/",
-        MaxAge: 60 * 60 * 24 * 7,
+        maxAge: 60 * 60 * 24 * 7,
       })
     );
+
     res.status(201);
-    res.end();
+    res.json({});
   } else {
     res.status(402);
-    res.end();
+    res.json({});
   }
 }

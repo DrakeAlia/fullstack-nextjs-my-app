@@ -4,10 +4,9 @@ import { db } from "./db";
 
 export const hashPassword = (password) => bcrypt.hash(password, 10);
 
-export const comparePasswords = (plainTextPassword, hashPassword) =>
-  bcrypt.compare(plainTextPassword, hashPassword);
+export const comparePasswords = (plainTextPassword, hashedPassword) =>
+  bcrypt.compare(plainTextPassword, hashedPassword);
 
-// Create a JWT
 export const createJWT = (user) => {
   const iat = Math.floor(Date.now() / 1000);
   const exp = iat + 60 * 60 * 24 * 7;
@@ -20,7 +19,6 @@ export const createJWT = (user) => {
     .sign(new TextEncoder().encode(process.env.JWT_SECRET));
 };
 
-// Validate a JWT
 export const validateJWT = async (jwt) => {
   const { payload } = await jwtVerify(
     jwt,
@@ -30,15 +28,14 @@ export const validateJWT = async (jwt) => {
   return payload.payload as any;
 };
 
-// Getting the JWT from cookies
 export const getUserFromCookie = async (cookies) => {
   const jwt = cookies.get(process.env.COOKIE_NAME);
 
-  const { id } = await validateJWT(jwt.value);
+  const { id } = await validateJWT(jwt);
 
   const user = await db.user.findUnique({
     where: {
-      id: id as string,
+      id,
     },
   });
 
