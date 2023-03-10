@@ -9,7 +9,7 @@ import { register, sigin } from "@component/lib/api";
 import { useCallback, useState } from "react";
 
 const registerContent = {
-  linkurl: "/signin",
+  linkUrl: "/signin",
   linkText: "Already have an account?",
   header: "Create a new account",
   subheader: "Just a few things to get started",
@@ -17,7 +17,7 @@ const registerContent = {
 };
 
 const signinContent = {
-  linkurl: "/register",
+  linkUrl: "/register",
   linkText: "Don't have an account?",
   header: "Welcome back",
   subheader: "Enter your credentials to access your account",
