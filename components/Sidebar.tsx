@@ -24,10 +24,7 @@ const Sidebar = () => {
   );
 };
 
-
 export default Sidebar;
-
-
 
 // For logo when implemented:
 //   <div className="w-full flex justify-center items-center">
