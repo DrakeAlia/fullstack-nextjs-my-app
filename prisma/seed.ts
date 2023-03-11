@@ -1,5 +1,6 @@
 // import { hashPassword } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { hashPassword } from "@component/lib/auth";
 import { TASK_STATUS } from "@prisma/client";
 
 const getRandomTaskStatus = () => {
@@ -19,7 +20,7 @@ async function main() {
       email: "user@email.com",
       firstName: "User",
       lastName: "Person",
-      password: "password",
+      password: await hashPassword("password"),
       projects: {
         create: new Array(5).fill(1).map((_, i) => ({
           name: `Project ${i}`,
