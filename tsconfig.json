@@ -25,8 +25,8 @@
       "@/components/*": ["./components/*"],
       "@/assets/*": ["./assets/*"],
       "@/styles/*": ["./styles/*"],
-      // "@/hooks/*": ["./hooks/*"],
-      // "@/prisma/*": ["./prisma/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/prisma/*": ["./prisma/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
