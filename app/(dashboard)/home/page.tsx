@@ -10,6 +10,8 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { Suspense } from "react";
 
+// This is the function that will be called on the server
+// to get the data for the page.
 const getData = async () => {
   await delay(2000);
   const user = await getUserFromCookie(cookies());

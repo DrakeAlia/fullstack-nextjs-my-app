@@ -1,5 +1,16 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
+// npx commands for Prisma:
+// npx prisma studio --preview-feature
+// npx prisma format --preview-feature
+// npx prisma migrate dev --name init --preview-feature
+// npx prisma db seed --preview-feature
+// npx prisma migrate deploy --preview-feature
+// npx prisma migrate reset --preview-feature
+
+// Some dbs will allow you to turn on the ability 
+// to have an error thrown if you make a query that's not index
+
 
 generator client {
   provider = "prisma-client-js"
