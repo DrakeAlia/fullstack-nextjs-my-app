@@ -59,3 +59,19 @@ export default async function Page() {
     </div>
   );
 }
+
+
+
+
+
+
+// The home and project routes share the same layout, both being part of the dashboard.
+// Signin and register share the same layout with each other as well. 
+// Because all 4 routes are on the same parent segment /, they would share the same layout
+// if we didn't specify a layout for each route.
+
+// We don't want this, so we'll use route grouping here. 
+// This will allow us to have two root layouts without adding segments to the url
+
+// If you have page in the app root you need to have layout in the app root as well
+// If you don't have layout then page will not be rendered, it needs to be rendered into an HTML document and you didn't give it one
