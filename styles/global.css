@@ -38,6 +38,7 @@
     radial-gradient(at 35% 44%, hsla(337, 92%, 61%, 1) 0px, transparent 50%);
 }
 
+/* adds a blur effect for our background */
 .glass {
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.4);

@@ -18,3 +18,5 @@ export default function AuthRootLayout({ children }) {
     </html>
   );
 }
+
+// This we're going to make our root layout for the auth root grouping
