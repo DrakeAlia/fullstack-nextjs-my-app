@@ -17,4 +17,5 @@ export default function DashboardRootLayout({ children }) {
   );
 }
 
-// rainbow-mesh
+// This were we add Sidebar and GlassPane to the page.
+// rainbow-mesh instead of candy-mesh
