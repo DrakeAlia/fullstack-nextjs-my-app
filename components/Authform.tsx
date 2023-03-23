@@ -9,7 +9,7 @@ import { register, signin } from "@component/lib/api";
 import { useCallback, useState } from "react";
 
 const registerContent = {
-  linkUrl: "/signin",
+  linkUrl: "/signin"
   linkText: "Already have an account?",
   header: "Create a new account",
   subheader: "Just a few things to get started",
@@ -28,7 +28,7 @@ const initial = { email: "", password: "", firstName: "", lastName: "" };
 
 export default function Authform({ mode }: { mode: "register" | "signin" }) {
   const [formState, setFormState] = useState({ ...initial });
-//   const [error, setError] = useState("");
+  //   const [error, setError] = useState("");
 
   const router = useRouter();
   const handleSubmit = async (e) => {
@@ -132,6 +132,5 @@ export default function Authform({ mode }: { mode: "register" | "signin" }) {
     </Card>
   );
 }
-
 
 // export default Authform;

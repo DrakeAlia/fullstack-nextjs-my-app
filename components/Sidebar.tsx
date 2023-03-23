@@ -3,6 +3,9 @@
 import Card from "./Card";
 import SidebarLink from "./SidebarLink";
 
+// Optional Logo
+
+// These links will be passed down to the SidebarLink component
 const links = [
   { label: "Home", icon: "Grid", link: "/home" },
   {
@@ -18,6 +21,7 @@ const links = [
   },
 ];
 
+// Loop through the links and render a SidebarLink component for each one
 const Sidebar = () => {
   return (
     <Card className="h-full w-40 flex items-center justify-between flex-wrap">
@@ -34,3 +38,7 @@ export default Sidebar;
 //   <div className="w-full flex justify-center items-center">
 //     <Image src={logo} alt="Able logo" priority className="w-14" />
 //   </div>;
+
+
+// q: what does SOILD stand for in 00 programming?
+// a: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion

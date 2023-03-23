@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+// Card will be displayed as a div with a rounded border, a drop shadow, and a white background
+// for our cards.
 const Card = ({ className, children }) => {
   return (
     <div
