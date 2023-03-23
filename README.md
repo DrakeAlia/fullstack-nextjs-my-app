@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## About this Project
+
+This project is a simple to-do dashboard where you can register and add new projects to your board. There are some missing features as this is a simple fullstack project in testing out next.js 13 based on a tutorial
+
 ## Getting Started
 
 First, run the development server:
@@ -14,7 +18,16 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Signin and Register
+
+When you arrive at the Sign In page, the signin button will not work because there is no seeded user. So you have sign up/register in order to log in
+
+## Creating a new project
+
+When you create a new project, will have to refresh the page in order to see the new project show up in your dashboard
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
