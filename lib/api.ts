@@ -1,4 +1,5 @@
-// We need to be able to make API request to API routes that will allow a user to sign in and register.
+// We need to be able to make API request to API routes that will allow a user to sign in 
+// and register.
 
 // fetcher is a function that will make a request to the API route and return the data.
 export const fetcher = async ({ url, method, body, json = true }) => {
